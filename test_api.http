@@ -1,14 +1,28 @@
-### Signup
+### 📝 Signup user
 POST http://127.0.0.1:5000/api/signup
 Content-Type: application/json
 
 {
   "username": "eric",
   "email": "eric@example.com",
-  "password": "12345"
+  "password": "12345",
+  "role": "user"
 }
 
-### Login
+
+### 🧑‍💼 Signup admin
+POST http://127.0.0.1:5000/api/signup
+Content-Type: application/json
+
+{
+  "username": "alice",
+  "email": "alice@example.com",
+  "password": "adminpass",
+  "role": "admin"
+}
+
+
+### 🔐 Login user
 POST http://127.0.0.1:5000/api/login
 Content-Type: application/json
 
@@ -17,6 +31,7 @@ Content-Type: application/json
   "password": "12345"
 }
 
-### Profile (replace token below)
+
+### 👤 Access profile (replace TOKEN below)
 GET http://127.0.0.1:5000/api/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1OTgzMzczNiwianRpIjoiODUyMjA5NjItYjA5MC00OTI4LTlmYjQtOGJlNjA4M2Q5MmYzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzU5ODMzNzM2LCJjc3JmIjoiNTI3ZmRjZTEtODE1Ny00MTY3LTg4ZWQtNmYxMGUyNmJjNGE1IiwiZXhwIjoxNzU5ODM0NjM2fQ.LdZDCh83xQk28ns4iR-DuZJOeJByvMxOQFgDOcGP5Yk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1OTkxMjgxMSwianRpIjoiNjUyYzc0NzctNTkyZi00MDU0LTg4YjYtMDc2YmRkNWM2NTFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzU5OTEyODExLCJjc3JmIjoiNjg1MjA2NWQtMTBmYS00NmYzLWEyZjItZmQ0NmNkNWJkMDVhIiwiZXhwIjoxNzU5OTEzNzExfQ.vypk3ldfEi_TOUe7tfmv0qDTsv1qsj6__6kQKYUHxII
